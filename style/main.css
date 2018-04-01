@@ -931,6 +931,7 @@ margin-left: 0;
   .featured-boats-list li:nth-of-type(1n+1) {
     overflow: hidden;
     width: 99%;
+    max-width: 570px;
     margin: 5px 0;
     border-radius: 10px;
   }
