@@ -954,4 +954,9 @@ margin-left: 0;
   .footer-form input {
     border-radius: 5px;
   }
+
+  .footer-form .red-button {
+    display: block;
+    margin: 5px auto 0;
+  }
 }
