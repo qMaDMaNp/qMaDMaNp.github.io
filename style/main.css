@@ -91,20 +91,23 @@ section {
 
 /* Main styles */
 /* Header *//* Header *//* Header *//* Header *//* Header *//* Header *//* Header *//* Header */
-
-.site-header {
+.page-header {
   background: url("../img/header-background.png") no-repeat;
   background-position: 50% 0%;
   padding-bottom: 15%;
   background-size: cover;
 }
 
-.site-header .container {
+.page-header .container {
   width: 100%;
   max-width: 1497px;
 }
 
-.logo {
+.heading {
+  padding-top: 39px;
+}
+
+.heading-logo {
   float: left;
   width: 166px;
   height: 33px;
@@ -116,35 +119,31 @@ section {
   display: none;
 }
 
-.hamburger div {
+.hamburger__stripe {
   width: 35px;
   height: 5px;
   background-color: #fff;
   margin: 6px 0;
 }
 
-.heading {
-  padding-top: 39px;
-}
-
-.header-list {
+.navigation-list {
   padding: 0;
   margin: -4px 10px auto;
   float: right;
 }
 
-.heading li {
+.navigation-list__item {
   display: inline-block;
   padding: 10.5px 35px;
   border-radius: 5px;
   border: 1px solid transparent;
 }
 
-.heading li:hover {
+.navigation-list__item:hover {
   border-color: #fff;
 }
 
-.heading li a{
+.navigation-list__link {
   font-size: 16px;
   color: #fff;
 }
@@ -155,11 +154,11 @@ section {
   margin-bottom: 50px;
 }
 
-.header-content h2 {
+.header-content__big-text {
   line-height: 1;
 }
 
-.header-content p,
+.header-content__small-text,
 .own-boat header p {
   margin: 0 auto 81px;
   font-size: 30px;
@@ -173,11 +172,7 @@ section {
   width: 100%;
 }
 
-.header-form button {
-  padding-left: 29px;
-}
-
-.header-content input {
+.header-form__search-area {
   border: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -193,44 +188,45 @@ section {
   color: #717171;
 }
 
-.red-button {
+.btn {
   display: inline-block;
+  background-color: #fff;
+
+  background: url("../img/sailboat.png");
+  background-position: 40px 22px;
+  background-repeat: no-repeat;
   background-color: #e7434e;
 
   border: 0;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-radius: 5px;
 
   font-family: "RalewayBold", sans-serif;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-}
-
-.site-header .red-button:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-.site-header .red-button {
-  display: inline-block;
-  background: url("../img/sailboat.png");
-  background-position: 40px 22px;
-  background-repeat: no-repeat;
-  background-color: #e7434e;
 
   width: 200px;
   height: 60px;
+  padding-left: 29px;
 }
 
-.red-button:hover {
+.btn:hover {
   cursor: pointer;
   opacity: 0.8;
 }
 
-/* Top destinations *//* Top destinations *//* Top destinations *//* Top destinations *//* Top destinations */
+.btn_red {
+  background-color: #e7434e;
+}
 
+.btn-border_right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+/* Top destinations *//* Top destinations *//* Top destinations *//* Top destinations *//* Top destinations */
 .info-box {
  position: relative;
  bottom: 70px;
@@ -664,25 +660,25 @@ margin-left: 0;
 /* Common media query *//* Common media query *//* Common media query */
 @media (max-width: 991px) {
 /*  Header  *//*  Header  *//*  Header  */
-  .header-list {
-    height: 15%;
+  .navigation-list {
+    height: 20%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 10%;
     right: 2.4%;
     background-color: rgba(1,1,1, 0.8);
-    overflow-x: hidden;
+    overflow: hidden;
     transition: 0.5s;
   }
 
-  .header-list li {
+  .navigation-list__item {
     text-align: center;
     white-space: nowrap;
     display: block;
   }
 
-  .show-header-list {
+  .show-navigation-list {
     padding: 19px 10px 0 10px;
     width: 250px;
   }
@@ -959,7 +955,6 @@ margin-left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #222;
   }
 
   .footer-form .red-button {

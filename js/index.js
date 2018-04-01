@@ -1,3 +1,3 @@
 $('.hamburger').click(function() {
-		$('.header-list').toggleClass('show-header-list');
+		$('.navigation-list').toggleClass('show-navigation-list');
 });
