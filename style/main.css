@@ -19,7 +19,6 @@
 }
 
 /* Common styles */
-
 .group:after {
   content: "";
   display: table;
@@ -380,7 +379,7 @@ section {
   color: #fff;
 }
 
-.big-btn {
+.link-btn {
   position: relative;
   bottom: 10px;
   padding: 21.5px 41.5px;
@@ -391,25 +390,25 @@ section {
   color: #343434;
 }
 
-.big-btn:hover {
+.link-btn:hover {
   border-color: transparent;
   background: #e7434e;
   color: #fff;
 }
 
-.big-btn_red {
+.link-btn_red {
   background: #e7434e;
   color: #fff;
   border: transparent;
 }
 
-.big-btn_red:hover {
+.link-btn_red:hover {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
 
-.big-btn_small {
+.link-btn_small {
   padding-left: 47px;
   padding-right: 47px;
 }
@@ -496,7 +495,7 @@ section {
 }
 
 /* Footer  *//* Footer  *//* Footer  */
-.site-footer {
+.page-footer {
   background: url("../img/Prostokat10.png") no-repeat;
   background-color: #404040;
   padding-top: 58px;
@@ -511,18 +510,18 @@ section {
   justify-content: space-around;
 }
 
-.footer-content .top-locations-list,
-.footer-content .featered-boats-list,
-.footer-content .contact-us-list {
+.top-locations-list,
+.featered-boats-list,
+.contact-us-list {
   display: flex;
   flex-direction: column;
   vertical-align: top;
   text-align: left;
 }
 
-.site-footer .top-locations-list li,
-.site-footer .featered-boats-list li,
-.site-footer .contact-us-list li {
+.top-locations-list__item,
+.featered-boats-list__item,
+.contact-us-list__item {
   white-space: nowrap;
 }
 
@@ -533,9 +532,9 @@ section {
   text-align: left;
 }
 
-.site-footer .top-locations-list h5,
-.site-footer .featered-boats-list h5,
-.site-footer .contact-us-list h5, .form-block h5 {
+.top-locations-list__title,
+.featered-boats-list__title,
+.contact-us-list__title, .form-block__title {
   font-size: 14px;
   font-family: "Raleway";
   color: #fff;
@@ -545,9 +544,9 @@ section {
   margin-bottom: 18px;
 }
 
-.site-footer .top-locations-list a,
-.site-footer .featered-boats-list a,
-.site-footer .contact-us-list a {
+.top-locations-list__link,
+.featered-boats-list__link,
+.contact-us-list__link {
   color: #fff;
   font-size: 14px;
   font-family: "OpenSans";
@@ -555,9 +554,9 @@ section {
   font-weight: 100;
 }
 
-.site-footer .top-locations-list a:hover,
-.site-footer .featered-boats-list a:hover,
-.site-footer .contact-us-list a:hover {
+.top-locations-list__link:hover,
+.featered-boats-list__link:hover,
+.contact-us-list__link:hover {
   opacity: 0.6;
 }
 
@@ -569,21 +568,29 @@ section {
   margin: 15px 0;
 }
 
-.form-block .social li {
+.form-block .social__item {
   display: inline-block;
   margin: 0 4px;
 }
 
-.form-block .social li:nth-of-type(1) {
+.form-block .social__item:nth-of-type(1) {
 margin-left: 0;
 }
 
-.form-block .red-button {
+.btn-simple {
+  font-family: "OpenSans", sans-serif;
+  font-weight: normal;
+
+  border-radius: 0 5px 5px 0;
+  background-image: none;
+  padding: 0;
+  vertical-align: top;
+
   width: 147px;
   height: 42px;
 }
 
-.form-block input {
+.footer-form__email {
   border: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -668,61 +675,60 @@ margin-left: 0;
     width: 100%;
   }
 
-  .site-header .container {
+  .page-header .container {
     max-width: 1170px;
     width: 100%;
   }
 
-  .site-header .logo {
+  .heading-logo {
     margin-left: 35px;
   }
 
-  .header-form input {
+  .header-form__search-area {
     border-radius: 5px 0 0 5px;
   }
 
-  .site-header .red-button {
+  .header-form .btn {
     border-radius: 0 5px 5px 0;
   }
 
   /* Top destinations *//* Top destinations */
-  .info-box-list li {
+  .info-box-list__item {
     width: 238px;
   }
 
-  .top-dest-list li:nth-of-type(1){
+  .top-dest-list__item:nth-of-type(1){
     margin: 13px 13px;
 
   }
 
-  .top-dest-list li:nth-of-type(1n+2){
+  .top-dest-list__item:nth-of-type(1n+2){
     margin: 13px 13px;
   }
 
   /* Featured boats  *//* Featured boats  *//* Featured boats  */
 
-  .featured-boats-list li:nth-of-type(1n+1) {
+  .featured-boats-list__item:nth-of-type(1n+1) {
     margin: 8px 6px;
   }
 
-  .featured-boats-list li {
+  .featured-boats-list__item {
     width: 470px;
     height: 278px;
   }
 
-  .featured-boats-list li img{
+  .featured-boats-list__img{
     width: 470px;
   }
 
 /*  Footer  *//*  Footer  *//*  Footer  *//*  Footer  */
 
-  .form-block input {
-    border-radius: 5px;
+  .footer-form__email {
+    border-radius: 5px 0 0 5px;
   }
 
-  .red-button {
-    margin-top: 5px;
-    border-radius: 5px;
+  .footer-form .btn {
+    border-radius: 0 5px 5px 0;
   }
 
   .form-block {
@@ -736,19 +742,19 @@ margin-left: 0;
     max-width: 750px;
   }
 /* Header *//* Header *//* Header */
-  .red-button {
+  .header-form .btn {
     margin-top: 5px;
     border-radius: 5px;
   }
 
-  .header-form input {
+  .header-form__search-area {
     border-radius: 5px;
     display: block;
     margin: 0 auto;
   }
 
 /* Top destinations *//* Top destinations */
-  .info-box-list li {
+  .info-box-list__item {
     width: 180px;
   }
 
@@ -756,18 +762,18 @@ margin-left: 0;
     text-align: center;
   }
 
-  .top-dest-list li:nth-of-type(1) {
+  .top-dest-list__item:nth-of-type(1) {
     max-width: 740px;
     height: 350px;
     margin-left: 0;
     margin-right: 0;
   }
 
-  .top-dest-list li:nth-of-type(1) img {
+  .top-dest-list__item:nth-of-type(1) .top-dest-list__img {
     max-width: 740px;
   }
 
-  .top-dest-list li {
+  .top-dest-list__item {
     margin: 0;
   }
 
@@ -777,7 +783,7 @@ margin-left: 0;
   }
 
 /* Featured boats  *//* Featured boats  */
-  .featured-boats-list li:nth-of-type(1n+1) {
+  .featured-boats-list__item:nth-of-type(1n+1) {
     margin-left: 0;
     margin-right: 0;
   }
@@ -806,7 +812,8 @@ margin-left: 0;
     order: 4;
     margin-top: 45px;
   }
-  .footer-form .red-button {
+
+  .footer-form .btn {
     border-radius: 0px 5px 5px 0px;
   }
 }
@@ -824,22 +831,24 @@ margin-left: 0;
   a {
     font-size: 11px;
   }
-/* Header *//* Header *//* Header *//* Header */
-  .red-button {
+
+
+  .btn {
     margin-top: 5px;
     border-radius: 5px;
   }
-
-  .header-form input {
+/* Header *//* Header *//* Header *//* Header */
+  .header-form__search-area {
     border-radius: 5px;
     max-width: 400px;
     width: 100%;
   }
 
-  .site-header .red-button {
+  .header-form .btn {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
   }
 
 /* Top destinations *//* Top destinations */
@@ -847,25 +856,25 @@ margin-left: 0;
     padding: 20px 70px;
   }
 
-  .info-box-list li {
+  .info-box-list__item {
     display: block;
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #d4d4d4;
   }
 
-  .top-dest-list li {
+  .top-dest-list__item {
     margin-left: 0;
     margin-right: 0;
     width: 99%;
     height: 99%;
   }
 
-  .top-dest-list li img {
+  .top-dest-list__img {
     width: 99%;
   }
 
-  .top-dest-list li:nth-of-type(1) {
+  .top-dest-list__item:nth-of-type(1) {
     overflow: hidden;
     max-width: 370px;
     max-height: 362px;
@@ -874,13 +883,13 @@ margin-left: 0;
     border-radius: 5px;
   }
 
-  .top-dest-list li:nth-of-type(1) img {
+  .top-dest-list__item:nth-of-type(1) .top-dest-list__img {
     height: 99%;
     max-height: 361px;
     width: 214%;
   }
 
-  .top-dest-list li:nth-of-type(1) {
+  .top-dest-list__item:nth-of-type(1) {
     height: 99%;
     margin-left: 0;
   }
@@ -895,7 +904,7 @@ margin-left: 0;
   }
 
 /* Featured boats  *//* Featured boats  */
-  .featured-boats-list li:nth-of-type(1n+1) {
+  .featured-boats-list__item:nth-of-type(1n+1) {
     overflow: hidden;
     width: 99%;
     max-width: 570px;
@@ -909,16 +918,16 @@ margin-left: 0;
     padding-right: 15px;
   }
 
-  .footer-content .top-locations-list,
-  .footer-content .featered-boats-list,
-  .footer-content .form-block,
-  .footer-content .contact-us-list {
+  .top-locations-list,
+  .featered-boats-list,
+  .form-block,
+  .contact-us-list {
     text-align: center;
     border-bottom: 1px solid #d4d4d4;
     margin: 10px 0;
   }
 
-  .footer-form input {
+  .footer-form__email {
     border-radius: 5px;
   }
 
@@ -928,7 +937,7 @@ margin-left: 0;
     align-items: center;
   }
 
-  .footer-form .red-button {
+  .footer-form .btn {
     display: block;
     margin: 5px auto 0;
   }

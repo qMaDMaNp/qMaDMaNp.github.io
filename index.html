@@ -39,7 +39,7 @@
           <p class="header-content__text">AND SET YOUR SAILS INTO PARADISE! </p>
           <form class="header-form" action="index.html" method="post">
             <input class="header-form__search-area" type="search" placeholder="WHAT IS YOUR DESTINATION, SAILOR?">
-            <button type="search" class="btn btn_red">Find a boat</button>
+            <button class="btn btn_red" type="search">Find a boat</button>
           </form>
         </div>
       </div>
@@ -133,7 +133,7 @@
             </a>
           </li>
         </ul>
-        <a class="big-btn" href="#">EXPLORE MORE DESTINATIONS</a>
+        <a class="link-btn" href="#">EXPLORE MORE DESTINATIONS</a>
       </div>
     </section>
 
@@ -143,7 +143,7 @@
           <h2 class="own-boat__big-text">HAVE YOUR OWN BOAT?</h2>
           <p class="own-boat__text">navigare necesse est, vivere non est necesse</p>
         </header>
-        <a class="big-btn big-btn_red" href="#">Make money with your boat</a>
+        <a class="link-btn link-btn_red" href="#">Make money with your boat</a>
       </div>
     </section>
 
@@ -205,54 +205,83 @@
               </div>
           </li>
         </ul>
-        <a class="big-btn big-btn_small" href="#">LOAD MORE BOATS</a>
+        <a class="link-btn link-btn_small" href="#">LOAD MORE BOATS</a>
       </div>
     </section>
 
-    <footer class="site-footer">
+    <footer class="page-footer">
       <div class="container">
         <div class="footer-content">
-        <ul class="top-locations-list">
-          <h5>Top Locations</h5>
-          <li><a href="#">Lorem ipsum dolor</a></li>
-          <li><a href="#">Sit amet consectetur</a></li>
-          <li><a href="#">Adipisicing elit</a></li>
-          <li><a href="#">Eiusmod tempor</a></li>
-          <li><a href="#">Inclididunt ut labore</a></li>
-        </ul>
-        <ul class="featered-boats-list">
-          <h5>Featured boats</h5>
-          <li><a href="#">Lorem ipsum dolor</a></li>
-          <li><a href="#">Sit amet consectetur</a></li>
-          <li><a href="#">Adipisicing elit</a></li>
-          <li><a href="#">Eiusmod tempor</a></li>
-        </ul>
-        <div class="form-block">
-         <h5>Subscribe to our newsletter</h5>
-          <form class="footer-form" action="index.html" method="get">
-            <input type="text" name="" value="" placeholder="Your email adress">
-            <button type="button" name="button" class="btn btn_red">Subscribe</button>
-          </form>
-          <ul class="social">
-            <li>
-              <a href="#" class="fa fa-facebook"></a>
+          <ul class="top-locations-list">
+              <h5 class="top-locations-list__title">Top Locations</h5>
+              <li class="top-locations-list__item">
+                <a class="top-locations-list__link" href="#">Lorem ipsum dolor</a>
+              </li>
+              <li class="top-locations-list__item">
+                <a class="top-locations-list__link" href="#">Sit amet consectetur</a>
+              </li>
+              <li class="top-locations-list__item">
+                <a class="top-locations-list__link" href="#">Adipisicing elit</a>
+              </li>
+              <li class="top-locations-list__item">
+                <a class="top-locations-list__link" href="#">Eiusmod tempor</a>
+              </li>
+              <li class="top-locations-list__item">
+                <a class="top-locations-list__link" href="#">Inclididunt ut labore</a>
+              </li>
+          </ul>
+          <ul class="featered-boats-list">
+            <h5 class="featered-boats-list__title">Featured boats</h5>
+            <li class="featered-boats-list__item">
+              <a class="featered-boats-list__link" href="#">Lorem ipsum dolor</a>
             </li>
-            <li>
-              <a href="#" class="fa fa-twitter"></a>
+            <li class="featered-boats-list__item">
+              <a class="featered-boats-list__link" href="#">Sit amet consectetur</a>
             </li>
-            <li>
-              <a href="#" class="fa fa-google"></a>
+            <li class="featered-boats-list__item">
+              <a class="featered-boats-list__link" href="#">Adipisicing elit</a>
+            </li>
+            <li class="featered-boats-list__item">
+              <a class="featered-boats-list__link" href="#">Eiusmod tempor</a>
             </li>
           </ul>
-        </div>
-        <ul class="contact-us-list">
-          <h5>Contact us</h5>
-          <li><a href="#">Lorem ipsum dolor</a></li>
-          <li><a href="#">Sit amet consectetur</a></li>
-          <li><a href="#">Adipisicing elit</a></li>
-          <li><a href="#">Eiusmod tempor</a></li>
-          <li><a href="#">Inclididunt ut labore</a></li>
-        </ul>
+          <div class="form-block">
+           <h5 class="form-block__title">Subscribe to our newsletter</h5>
+            <form class="footer-form" action="index.html" method="get">
+              <input class="footer-form__email" type="text" name="" value="" placeholder="Your email adress">
+              <button class="btn btn_red btn-simple" type="button" name="button">Subscribe</button>
+            </form>
+
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link fa fa-facebook" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link fa fa-twitter" href="#"></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link fa fa-google" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <ul class="contact-us-list">
+            <h5 class="contact-us-list__title">Contact us</h5>
+            <li class="contact-us-list__item">
+              <a class="contact-us-list__link" href="#">Lorem ipsum dolor</a>
+            </li>
+            <li class="contact-us-list__item">
+              <a class="contact-us-list__link" href="#">Sit amet consectetur</a>
+            </li>
+            <li class="contact-us-list__item">
+              <a class="contact-us-list__link" href="#">Adipisicing elit</a>
+            </li>
+            <li class="contact-us-list__item">
+              <a class="contact-us-list__link" href="#">Eiusmod tempor</a>
+            </li>
+            <li class="contact-us-list__item">
+              <a class="contact-us-list__link" href="#">Inclididunt ut labore</a>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
